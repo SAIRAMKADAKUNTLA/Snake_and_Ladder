@@ -11,6 +11,7 @@ namespace Snake__Ladder
             snakeLadderGame.Position();
             snakeLadderGame.ToGetNumber();
             snakeLadderGame.CheckForOption();
+            snakeLadderGame.Wposition();
         }
     }
 }

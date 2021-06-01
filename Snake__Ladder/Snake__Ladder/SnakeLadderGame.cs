@@ -27,7 +27,7 @@ namespace Snake__Ladder
         int Player;
         public void CheckForOption()
         {
-            while (Player <= 100) 
+            while (Player <= 100) ///(UC4-checkupto position 100)
             { 
             Random random = new Random();
             int DieNumber = random.Next(0, 7);
@@ -61,6 +61,23 @@ namespace Snake__Ladder
             Console.WriteLine("player rolls die and get position "+Player);
         }
 
+        /// UC5-WinPosition
+
+        int WinPosition=100;
+        public void Wposition()
+        {
+            if (Iposition == WinPosition)
+            {
+                Console.WriteLine("-------Player Won!!!!-------");
+            }
+            if (Iposition > WinPosition)
+            {
+                Console.WriteLine("-- stays in previous position---");
+            }
+            else
+                Console.WriteLine("continue the game");
+            
+        }
 
 
     }
