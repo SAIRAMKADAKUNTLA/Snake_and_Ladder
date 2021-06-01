@@ -13,6 +13,14 @@ namespace Snake__Ladder
             Console.WriteLine("Snake and Ladder game played with single player at position is"+" "+StartPosition);
         }
 
+        ///UC2-ToGetNumber
+        public void ToGetNumber()
+        {
+            Random random = new Random();
+            int DieNumber = random.Next(0, 7);
+            Console.WriteLine("After roll we get the number="+" "+DieNumber);
+        }
+
 
 
     }

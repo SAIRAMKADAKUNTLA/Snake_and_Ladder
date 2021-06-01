@@ -9,6 +9,7 @@ namespace Snake__Ladder
             Console.WriteLine("Welcome to snake ladder game");
             SnakeLadderGame snakeLadderGame = new SnakeLadderGame();
             snakeLadderGame.Position();
+            snakeLadderGame.ToGetNumber();
         }
     }
 }
