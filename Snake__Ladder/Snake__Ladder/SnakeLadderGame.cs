@@ -27,6 +27,8 @@ namespace Snake__Ladder
         int Player;
         public void CheckForOption()
         {
+            while (Player <= 100) 
+            { 
             Random random = new Random();
             int DieNumber = random.Next(0, 7);
             Iposition = DieNumber;
@@ -49,14 +51,17 @@ namespace Snake__Ladder
             {
                 Player = 0;
             }
-            if (Iposition > 0)
-            {
-                Console.WriteLine("its a ladder");
-                Player += Iposition;
+                if (Iposition > 0)                             ///Ladder condition
+                {
+                    Console.WriteLine("its a ladder");
+                    Player += Iposition;
+                }
             }
 
             Console.WriteLine("player rolls die and get position "+Player);
         }
+
+
 
     }
 }
