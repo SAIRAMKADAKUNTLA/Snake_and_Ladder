@@ -10,6 +10,7 @@ namespace Snake__Ladder
             SnakeLadderGame snakeLadderGame = new SnakeLadderGame();
             snakeLadderGame.Position();
             snakeLadderGame.ToGetNumber();
+            snakeLadderGame.CheckForOption();
         }
     }
 }

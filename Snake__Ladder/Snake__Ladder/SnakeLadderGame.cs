@@ -10,18 +10,56 @@ namespace Snake__Ladder
         int StartPosition = 0;
         public void Position()
         {
-            Console.WriteLine("Snake and Ladder game played with single player at position is"+" "+StartPosition);
+            Console.WriteLine("Snake and Ladder game played with single player at position is" + " " + StartPosition);
         }
 
         ///UC2-ToGetNumber
+
         public void ToGetNumber()
         {
             Random random = new Random();
             int DieNumber = random.Next(0, 7);
-            Console.WriteLine("After roll we get the number="+" "+DieNumber);
+            Console.WriteLine("After roll we get the number=" + " " + DieNumber);
         }
 
+        ///UC3-CheckForOption
+        int Iposition;
+        int Player;
+        public void CheckForOption()
+        {
+            Random random = new Random();
+            int DieNumber = random.Next(0, 7);
+            Iposition = DieNumber;
+            if (Iposition == 0)
+            {                                           /////Noplay condition
+                Console.WriteLine("its a no play");
+                Player += Iposition;
+            }
+            if (Player == 0 && Iposition < 0)
+            {
+                Console.WriteLine("its a snake bite ");
+                Player = 0;                               ////Snake condition
+            }
+            if (Player > 0 && Iposition < 0)
+            {
+                Console.WriteLine("its a snake bite ");
+                Player += Iposition;
+            }
+            if (Player > 0)
+            {
+                Player = 0;
+            }
+            if (Iposition > 0)
+            {
+                Console.WriteLine("its a ladder");
+                Player += Iposition;
+            }
 
+            Console.WriteLine("player rolls die and get position "+Player);
+        }
 
     }
 }
+
+    
+
