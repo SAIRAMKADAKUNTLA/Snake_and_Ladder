@@ -25,12 +25,15 @@ namespace Snake__Ladder
         ///UC3-CheckForOption
         int Iposition;
         int Player;
+        public int DiceCount = 0;
+        const int Ladder = 1;
+        const int Snake = 2;
         public void CheckForOption()
         {
             while (Player <= 100) ///(UC4-checkupto position 100)
             { 
             Random random = new Random();
-            int DieNumber = random.Next(0, 7);
+            int DieNumber = random.Next(0, 3);
             Iposition = DieNumber;
             if (Iposition == 0)
             {                                           /////Noplay condition
@@ -57,8 +60,10 @@ namespace Snake__Ladder
                     Player += Iposition;
                 }
             }
+            DiceCount += 1;
 
             Console.WriteLine("player rolls die and get position "+Player);
+            Console.WriteLine("total number of times"+DiceCount);
         }
 
         /// UC5-WinPosition
@@ -78,6 +83,7 @@ namespace Snake__Ladder
                 Console.WriteLine("continue the game");
             
         }
+        
 
 
     }
